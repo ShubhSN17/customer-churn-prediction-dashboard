@@ -1,0 +1,37 @@
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files
+data/
+datasets/
+
+# Model files and artifacts
+models/
+*.pkl
+*.h5
+*.joblib
+
+# Reports, plots, and large outputs
+reports/
+*.png
+*.jpg
+*.jpeg
+*.csv
+
+# Environment and dependencies
+.env
+venv/
+.venv/
+env/
+*.log
+
+# OS and IDE files
+.DS_Store
+.vscode/
+.idea/
