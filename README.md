@@ -10,3 +10,17 @@ This project includes the complete end-to-end process:
 	•	Machine learning model development and evaluation
 	•	Model explainability (SHAP-based insights)
 	•	Deployment of an interactive Streamlit dashboard for real-time churn prediction and actionable insights
+
+Download dataset from Kaggle:
+https://www.kaggle.com/blastchar/telco-customer-churn
+Place it in data/raw/telco_churn.csv
+
+EDA Observations:
+
+    From the boxplots, we observe that shorter tenure and higher monthly charges are major drivers of customer churn.
+    Customers who churn typically have been with the company for less than a year, pay higher monthly rates, and therefore have lower total lifetime spending.
+    These insights suggest that early retention efforts and pricing optimization could significantly reduce churn rates.
+
+    We analyzed churn rates across key categorical features.
+    Customers on month-to-month contracts and those paying via electronic check have the highest churn rates, while longer contracts and automated payment methods significantly reduce churn.
+    Internet service type (Fiber) also shows higher churn compared to DSL users.
