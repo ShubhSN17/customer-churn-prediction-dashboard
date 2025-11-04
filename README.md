@@ -36,3 +36,15 @@ Fix's:
 - Replaced 'No internet service' entries with 'No'
 - Scaled numeric features (`tenure`, `MonthlyCharges`, `TotalCharges`) using `StandardScaler`
 - Saved the scaler as `scaler.pkl` in the `/models` directory for future use
+
+
+### Baseline Model — Logistic Regression
+- **Accuracy:** 81%
+- **Precision:** 0.67
+- **Recall:** 0.55
+- **F1-Score:** 0.60
+- **ROC-AUC:** 0.835
+- **Interpretation:**
+  - The model performs well overall.
+  - It correctly identifies 55% of churners.
+  - A good starting point; we’ll aim to improve recall with ensemble models.
