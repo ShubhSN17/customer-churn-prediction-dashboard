@@ -24,3 +24,7 @@ EDA Observations:
     We analyzed churn rates across key categorical features.
     Customers on month-to-month contracts and those paying via electronic check have the highest churn rates, while longer contracts and automated payment methods significantly reduce churn.
     Internet service type (Fiber) also shows higher churn compared to DSL users.
+
+Fix's:
+
+    After mapping Yes/No values we found NaNs from “No internet service” values; these were set to 0 (not subscribed)
