@@ -28,3 +28,11 @@ EDA Observations:
 Fix's:
 
     After mapping Yes/No values we found NaNs from “No internet service” values; these were set to 0 (not subscribed)
+
+### 🔧 Data Preprocessing
+- Removed unwanted columns (`customerID`)
+- Handled missing values in `TotalCharges`
+- Encoded categorical variables using Label and One-Hot Encoding
+- Replaced 'No internet service' entries with 'No'
+- Scaled numeric features (`tenure`, `MonthlyCharges`, `TotalCharges`) using `StandardScaler`
+- Saved the scaler as `scaler.pkl` in the `/models` directory for future use
