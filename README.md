@@ -61,3 +61,20 @@ Fix's:
 - The Random Forest slightly underperformed compared to Logistic Regression.
 - It has a strong ability to identify non-churners (Recall 0.91 for class 0) but missed some churners.
 - Next step: tune hyperparameters and test XGBoost to improve recall.
+
+“Note: ROC-AUC metric and probability-based threshold tuning were skipped intentionally to focus on core classification metrics — Accuracy, Precision, Recall, and F1-Score.”
+
+
+### 🌲 Tuned Random Forest Classifier
+
+| Metric | Value |
+|--------|--------|
+| Accuracy | **0.73** |
+| Precision | **0.49** |
+| Recall | **0.80** |
+| F1-Score | **0.61** |
+
+**Insights:**
+- Recall improved from **0.48 → 0.80** after tuning — model now catches 8 out of 10 churners.
+- Precision dropped slightly, which is acceptable for churn prediction.
+- Final model shows a strong balance between business usefulness and model performance.
