@@ -43,8 +43,21 @@ Fix's:
 - **Precision:** 0.67
 - **Recall:** 0.55
 - **F1-Score:** 0.60
-- **ROC-AUC:** 0.835
 - **Interpretation:**
   - The model performs well overall.
   - It correctly identifies 55% of churners.
   - A good starting point; we’ll aim to improve recall with ensemble models.
+
+
+### 🪵 Model 2: Random Forest Classifier
+
+| Metric | Value |
+|--------|--------|
+| Accuracy | 0.79 |
+| Precision | 0.65 |
+| Recall | 0.48 |
+| F1-Score | 0.55 |
+**Insights:**
+- The Random Forest slightly underperformed compared to Logistic Regression.
+- It has a strong ability to identify non-churners (Recall 0.91 for class 0) but missed some churners.
+- Next step: tune hyperparameters and test XGBoost to improve recall.
