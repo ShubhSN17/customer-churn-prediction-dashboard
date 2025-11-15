@@ -1,3 +1,8 @@
 pandas
 numpy
 matplotlib
+scikit-learn
+joblib
+streamlit
+imbalanced-learn
+category_encoders
