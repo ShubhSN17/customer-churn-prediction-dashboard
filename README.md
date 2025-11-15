@@ -78,3 +78,165 @@ Fix's:
 - Recall improved from **0.48 → 0.80** after tuning — model now catches 8 out of 10 churners.
 - Precision dropped slightly, which is acceptable for churn prediction.
 - Final model shows a strong balance between business usefulness and model performance.
+# 📊 Customer Churn Prediction Dashboard
+### 📡 Telecom Industry — Machine Learning | End-to-End Project
+
+This project presents a fully developed **Customer Churn Prediction System** for a telecom company, built with a complete **machine learning pipeline**, **EDA insights**, and an interactive **Streamlit dashboard**. The goal is to identify customers likely to churn so the business can take preventative actions like offering discounts, improving plan recommendations, or enhancing customer service.
+
+---
+
+## 🚀 Project Highlights
+- Full end‑to‑end ML workflow (EDA → Preprocessing → Modeling → Deployment)
+- Interactive **Streamlit App** for real‑time churn prediction
+- Business‑oriented insights for decision making
+- Tuned Random Forest model optimized for **high recall** (catches most churners)
+- Clean and professional UX with actionable retention recommendations
+
+---
+
+## 📦 Dataset
+**Source:** Kaggle Telco Customer Churn Dataset  
+🔗 https://www.kaggle.com/blastchar/telco-customer-churn
+
+Place the dataset in:
+```
+data/raw/telco_churn.csv
+```
+
+---
+
+## 🧼 Data Preprocessing
+Key data cleaning & preparation steps:
+- Removed `customerID` column
+- Handled missing values in `TotalCharges`
+- Replaced "No internet service" & "No phone service" with "No" for consistency
+- Encoded categorical features using Label Encoding + One‑Hot Encoding
+- Scaled numeric features (`tenure`, `MonthlyCharges`, `TotalCharges`) using `StandardScaler`
+- Saved required deployment artifacts:
+  - `rf_model.pkl`
+  - `scaler.pkl`
+  - `feature_names.pkl`
+
+---
+
+## 📊 Exploratory Data Analysis — Key Insights
+### 🔍 Customer Behavior
+- Customers with **short tenure** churn significantly more.
+- Higher **monthly charges** correlate strongly with churn.
+- Customers who churn have **lower lifetime value**.
+
+### 📄 Categorical Insights
+- **Month-to-month contract** users churn the most.
+- **Electronic Check** payment method is associated with high churn.
+- **Fiber Optic** internet users churn more than DSL customers.
+
+### 💡 Business Insights (Actionable)
+- Offer retention incentives to month‑to‑month customers.
+- Encourage automatic payment methods to reduce churn.
+- Improve service quality and plans for Fiber customers.
+- High‑risk segment: **Low tenure + High monthly charges**.
+- Electronic check users respond well to discounts or auto‑pay benefits.
+- Senior citizens benefit from clear communication and simplified plans.
+
+---
+
+## 🤖 Model Training & Evaluation
+### **1️⃣ Logistic Regression (Baseline)**
+- Accuracy: **81%**
+- Precision: 0.67
+- Recall: 0.55
+- F1‑Score: 0.60
+
+### **2️⃣ Random Forest (Before Tuning)**
+- Accuracy: **79%**
+- Recall: 0.48
+- Notes: Great at catching non‑churners but weaker at detecting churners.
+
+### **3️⃣ Tuned Random Forest (Final Model)**
+- Accuracy: **73%**
+- Precision: 0.49
+- Recall: **0.80**  
+- F1‑Score: 0.61
+
+**Why this model?**  
+Churn prediction is recall‑sensitive — catching **8 out of 10 churners** is more valuable than maximizing precision.
+
+---
+
+## 🖥️ Streamlit App Features
+### 🎛️ Real‑Time Prediction
+- Input customer information
+- App computes **TotalCharges** automatically
+- Shows churn prediction + probability
+
+### 📈 Dashboard Metrics
+- Total customers
+- Churn percentage
+- Average tenure
+- Average monthly charges
+
+### 📄 EDA Insight Summary
+- Text‑only insights (no graphs)
+- Focused on business understanding
+
+### 🎯 Recommendations
+- Action items based on model & EDA
+
+---
+
+## 📂 Project Structure
+```
+customer-churn-prediction-dashboard/
+│
+├── app/
+│   └── streamlit_app.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── models/
+│   ├── rf_model.pkl
+│   ├── scaler.pkl
+│   └── feature_names.pkl
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_preprocessing.ipynb
+│   └── 03_modeling.ipynb
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🛠️ Technologies Used
+- Python
+- Pandas / NumPy
+- Scikit‑learn
+- Matplotlib
+- Streamlit
+- Joblib
+
+---
+
+## ▶️ Running the App
+### 1) Install requirements
+```
+pip install -r requirements.txt
+```
+
+### 2) Launch the dashboard
+```
+streamlit run app/streamlit_app.py
+```
+
+---
+
+## 📌 Summary
+This project delivers:
+- End‑to‑end ML engineering experience
+- Real‑world telecom churn prediction
+- Business‑driven insights
+- Professional deployment‑ready dashboard
